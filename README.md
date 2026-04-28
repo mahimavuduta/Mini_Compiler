@@ -7,11 +7,10 @@ A complete mini compiler built in **Python** that processes a simplified program
 ## 👥 Team
 | Name | Roll Number |
 |------|-------------|
-| Priya Ponugoti | 160123733167 |
 | Roshini Yanamala | 160123733169 |
 | Vuduta Mahima | 160123733177 |
 
-**Guide:** Smt. S. Durga Devi, Asst. Professor, Dept. of CSE  
+**Guide:** Dr. G. Vanitha & Sasmitha Ma'am, Dept. of CSE  
 **Institution:** Chaitanya Bharathi Institute of Technology (Autonomous), Hyderabad  
 **Year:** 2025–2026
 
@@ -95,4 +94,4 @@ The final phase translates the optimised TAC into **assembly-like target code** 
 ---
 
 ## 📄 License
-Developed as a Minor Project for academic purposes at CBIT (Autonomous), Hyderabad. Not for commercial use.
+Developed as a Project for academic purposes at CBIT (Autonomous), Hyderabad. Not for commercial use.
