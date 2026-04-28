@@ -10,7 +10,7 @@ A complete mini compiler built in **Python** that processes a simplified program
 | Roshini Yanamala | 160123733169 |
 | Vuduta Mahima | 160123733177 |
 
-**Guide:** Dr. G. Vanitha & Sasmitha Ma'am, Dept. of CSE  
+**Guide:** Dr. G. Vanitha Ma'am & Sasmitha Ma'am, Dept. of CSE  
 **Institution:** Chaitanya Bharathi Institute of Technology (Autonomous), Hyderabad  
 **Year:** 2025–2026
 
