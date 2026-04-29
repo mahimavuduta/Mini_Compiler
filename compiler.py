@@ -109,6 +109,22 @@ def phase1_lexer(source):
         if kind == 'IDENTIFIER' and value not in symbol_table:
             symbol_table[value] = {'type': 'unknown', 'value': None, 'line': line_num}
 
+    # ── Post-process: fill type & value from declaration pattern ─
+    for i in range(len(tokens) - 2):
+        if (tokens[i][0] == 'KEYWORD' and tokens[i][1] in ('int', 'float') and
+            tokens[i+1][0] == 'IDENTIFIER' and
+            tokens[i+2][0] == 'OPERATOR' and tokens[i+2][1] == '='):
+            name  = tokens[i+1][1]
+            dtype = tokens[i][1]
+            if name in symbol_table:
+                symbol_table[name]['type'] = dtype
+                # If next token after = is a direct number, fill value
+                if i+3 < len(tokens) and tokens[i+3][0] in ('INTEGER', 'FLOAT'):
+                    val = int(tokens[i+3][1]) if tokens[i+3][0] == 'INTEGER' else float(tokens[i+3][1])
+                    symbol_table[name]['value'] = val
+                else:
+                    symbol_table[name]['value'] = 'expression'
+
     # ── Token Table ──────────────────────────────────────────────
     section_title("TOKEN TABLE")
     rows = [(i+1, t[0], t[1], t[2]) for i, t in enumerate(tokens)]
